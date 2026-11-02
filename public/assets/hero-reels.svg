@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1600" role="img" aria-labelledby="title desc">
+  <title id="title">릴스 콘텐츠 제작 그래픽</title>
+  <desc id="desc">세로 영상 촬영 화면과 편집 타임라인을 표현한 그래픽</desc>
+  <rect width="900" height="1600" fill="#111111"/>
+  <rect x="72" y="80" width="756" height="1440" rx="34" fill="#F5F4F0"/>
+  <rect x="132" y="154" width="636" height="890" rx="26" fill="#181818"/>
+  <rect x="198" y="236" width="504" height="650" rx="18" fill="#D7FF3F"/>
+  <circle cx="450" cy="538" r="156" fill="#111111"/>
+  <polygon points="414,454 414,622 548,538" fill="#F7F7F2"/>
+  <rect x="164" y="1112" width="572" height="54" rx="27" fill="#181818"/>
+  <rect x="164" y="1214" width="176" height="176" rx="18" fill="#D7FF3F"/>
+  <rect x="376" y="1214" width="176" height="176" rx="18" fill="#181818"/>
+  <rect x="588" y="1214" width="148" height="176" rx="18" fill="#181818"/>
+  <rect x="190" y="1440" width="360" height="26" rx="13" fill="#181818" opacity=".5"/>
+</svg>

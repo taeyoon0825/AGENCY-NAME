@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1600" role="img" aria-labelledby="title desc">
+  <title id="title">외식 매장 콘텐츠 그래픽</title>
+  <desc id="desc">접시와 테이블, 촬영 프레임을 단순화한 세로형 그래픽</desc>
+  <rect width="900" height="1600" fill="#F5F4F0"/>
+  <rect x="78" y="92" width="744" height="1416" rx="32" fill="#151515"/>
+  <rect x="130" y="164" width="640" height="780" rx="28" fill="#D7FF3F"/>
+  <circle cx="450" cy="560" r="242" fill="#F5F4F0"/>
+  <circle cx="450" cy="560" r="152" fill="#171717"/>
+  <path d="M284 582c80-86 212-84 292 0" fill="none" stroke="#D7FF3F" stroke-width="42" stroke-linecap="round"/>
+  <rect x="190" y="1026" width="520" height="46" rx="23" fill="#F5F4F0"/>
+  <rect x="190" y="1118" width="360" height="28" rx="14" fill="#777"/>
+  <rect x="190" y="1186" width="440" height="28" rx="14" fill="#777"/>
+  <rect x="190" y="1322" width="220" height="70" rx="35" fill="#D7FF3F"/>
+  <rect x="470" y="1322" width="170" height="70" rx="35" fill="#F5F4F0"/>
+</svg>

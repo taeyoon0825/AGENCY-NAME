@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+  <title id="title">숏폼 콘텐츠 기획</title>
+  <desc id="desc">촬영 프레임과 편집 컷을 보여주는 그래픽</desc>
+  <rect width="900" height="1200" fill="#111111"/>
+  <rect x="102" y="72" width="410" height="728" rx="20" fill="#F5F4F0"/>
+  <rect x="150" y="132" width="314" height="520" rx="16" fill="#D7FF3F"/>
+  <circle cx="307" cy="392" r="96" fill="#111111"/>
+  <polygon points="286,342 286,442 366,392" fill="#F7F7F2"/>
+  <rect x="558" y="150" width="238" height="164" rx="14" fill="#D7FF3F"/>
+  <rect x="558" y="362" width="238" height="164" rx="14" fill="#F5F4F0"/>
+  <rect x="558" y="574" width="238" height="164" rx="14" fill="#D7FF3F"/>
+  <rect x="108" y="884" width="684" height="44" rx="22" fill="#F5F4F0"/>
+  <rect x="108" y="984" width="426" height="28" rx="14" fill="#777"/>
+</svg>

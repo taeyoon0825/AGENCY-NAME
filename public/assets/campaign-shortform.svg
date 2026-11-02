@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 825" role="img" aria-labelledby="title desc">
+  <title id="title">숏폼 브랜드 콘텐츠 예시</title>
+  <desc id="desc">편집 타임라인과 세로 영상 화면을 조합한 캠페인 예시 그래픽</desc>
+  <rect width="1200" height="825" fill="#F5F4F0"/>
+  <rect x="92" y="86" width="332" height="620" rx="24" fill="#111111"/>
+  <rect x="146" y="158" width="224" height="354" rx="16" fill="#D7FF3F"/>
+  <polygon points="230,278 230,392 324,335" fill="#111111"/>
+  <rect x="518" y="154" width="548" height="90" rx="45" fill="#111111"/>
+  <rect x="518" y="324" width="420" height="90" rx="45" fill="#D7FF3F"/>
+  <rect x="518" y="494" width="500" height="90" rx="45" fill="#111111"/>
+  <rect x="518" y="664" width="316" height="36" rx="18" fill="#777"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 825" role="img" aria-labelledby="title desc">
+  <title id="title">제품 스토리 콘텐츠 예시</title>
+  <desc id="desc">제품 패키지와 사용 장면 프레임을 조합한 캠페인 예시 그래픽</desc>
+  <rect width="1200" height="825" fill="#111111"/>
+  <rect x="80" y="80" width="430" height="590" rx="18" fill="#D7FF3F"/>
+  <rect x="192" y="190" width="206" height="356" rx="20" fill="#111111"/>
+  <rect x="620" y="122" width="430" height="280" rx="18" fill="#F5F4F0"/>
+  <rect x="620" y="462" width="300" height="190" rx="18" fill="#F5F4F0"/>
+  <circle cx="1004" cy="620" r="64" fill="#D7FF3F"/>
+  <rect x="170" y="712" width="614" height="36" rx="18" fill="#F5F4F0"/>
+</svg>

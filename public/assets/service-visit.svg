@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+  <title id="title">매장 방문 캠페인</title>
+  <desc id="desc">매장 방문 동선과 촬영 포인트를 표현한 그래픽</desc>
+  <rect width="900" height="1200" fill="#F5F4F0"/>
+  <rect x="100" y="92" width="700" height="1016" rx="18" fill="#181818"/>
+  <path d="M190 894C238 726 360 682 450 612c92-72 178-158 206-306" fill="none" stroke="#D7FF3F" stroke-width="34" stroke-linecap="round"/>
+  <circle cx="198" cy="894" r="56" fill="#F5F4F0"/>
+  <circle cx="450" cy="612" r="56" fill="#F5F4F0"/>
+  <circle cx="658" cy="306" r="56" fill="#F5F4F0"/>
+  <rect x="160" y="176" width="270" height="168" rx="12" fill="#D7FF3F"/>
+  <rect x="470" y="796" width="260" height="168" rx="12" fill="#F5F4F0"/>
+  <rect x="160" y="1000" width="410" height="30" rx="15" fill="#8B8B82"/>
+</svg>
