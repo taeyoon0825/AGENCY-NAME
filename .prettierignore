@@ -1,0 +1,6 @@
+node_modules/
+dist/
+artifacts/
+.npm-cache/
+package-lock.json
+.env*

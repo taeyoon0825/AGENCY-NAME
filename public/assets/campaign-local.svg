@@ -1,11 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 825" role="img" aria-labelledby="title desc">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1200 825"
+  role="img"
+  aria-labelledby="title desc"
+>
   <title id="title">방문형 매장 콘텐츠 예시</title>
   <desc id="desc">식탁, 메뉴, 촬영 프레임을 조합한 캠페인 예시 그래픽</desc>
-  <rect width="1200" height="825" fill="#202020"/>
-  <rect x="74" y="70" width="1052" height="685" rx="18" fill="#F5F4F0"/>
-  <circle cx="390" cy="410" r="180" fill="#111111"/>
-  <circle cx="390" cy="410" r="104" fill="#D7FF3F"/>
-  <rect x="660" y="160" width="300" height="500" rx="18" fill="#111111"/>
-  <rect x="704" y="214" width="212" height="292" rx="14" fill="#D7FF3F"/>
-  <rect x="704" y="546" width="172" height="32" rx="16" fill="#F5F4F0"/>
+  <rect width="1200" height="825" fill="#202020" />
+  <rect x="74" y="70" width="1052" height="685" rx="18" fill="#F5F4F0" />
+  <circle cx="390" cy="410" r="180" fill="#111111" />
+  <circle cx="390" cy="410" r="104" fill="#D7FF3F" />
+  <rect x="660" y="160" width="300" height="500" rx="18" fill="#111111" />
+  <rect x="704" y="214" width="212" height="292" rx="14" fill="#D7FF3F" />
+  <rect x="704" y="546" width="172" height="32" rx="16" fill="#F5F4F0" />
 </svg>

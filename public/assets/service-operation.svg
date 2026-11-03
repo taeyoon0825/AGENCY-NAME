@@ -1,20 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 900 1200"
+  role="img"
+  aria-labelledby="title desc"
+>
   <title id="title">캠페인 운영 관리</title>
   <desc id="desc">게시 일정과 확인 리스트를 표현한 그래픽</desc>
-  <rect width="900" height="1200" fill="#E5E3DB"/>
-  <rect x="96" y="96" width="708" height="1008" rx="20" fill="#111111"/>
-  <rect x="156" y="172" width="588" height="132" rx="16" fill="#D7FF3F"/>
+  <rect width="900" height="1200" fill="#E5E3DB" />
+  <rect x="96" y="96" width="708" height="1008" rx="20" fill="#111111" />
+  <rect x="156" y="172" width="588" height="132" rx="16" fill="#D7FF3F" />
   <g fill="#F5F4F0">
-    <rect x="156" y="380" width="120" height="120" rx="14"/>
-    <rect x="312" y="380" width="120" height="120" rx="14"/>
-    <rect x="468" y="380" width="120" height="120" rx="14"/>
-    <rect x="624" y="380" width="120" height="120" rx="14"/>
+    <rect x="156" y="380" width="120" height="120" rx="14" />
+    <rect x="312" y="380" width="120" height="120" rx="14" />
+    <rect x="468" y="380" width="120" height="120" rx="14" />
+    <rect x="624" y="380" width="120" height="120" rx="14" />
   </g>
   <g fill="#D7FF3F">
-    <rect x="156" y="566" width="120" height="120" rx="14"/>
-    <rect x="468" y="566" width="120" height="120" rx="14"/>
+    <rect x="156" y="566" width="120" height="120" rx="14" />
+    <rect x="468" y="566" width="120" height="120" rx="14" />
   </g>
-  <rect x="156" y="794" width="486" height="34" rx="17" fill="#F5F4F0"/>
-  <rect x="156" y="876" width="390" height="24" rx="12" fill="#777"/>
-  <rect x="156" y="944" width="452" height="24" rx="12" fill="#777"/>
+  <rect x="156" y="794" width="486" height="34" rx="17" fill="#F5F4F0" />
+  <rect x="156" y="876" width="390" height="24" rx="12" fill="#777" />
+  <rect x="156" y="944" width="452" height="24" rx="12" fill="#777" />
 </svg>

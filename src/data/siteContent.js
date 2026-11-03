@@ -88,8 +88,7 @@ export const services = [
   {
     number: '04',
     title: '캠페인 운영',
-    description:
-      '게시 일정과 콘텐츠 공개 여부를 확인하고, 확인 가능한 반응 지표를 정리합니다.',
+    description: '게시 일정과 콘텐츠 공개 여부를 확인하고, 확인 가능한 반응 지표를 정리합니다.',
     points: ['일정 관리', '게시 확인', '결과 정리'],
     image: '/assets/service-operation.svg',
     alt: '캠페인 일정과 게시 확인을 표현한 운영 그래픽',
@@ -108,16 +107,14 @@ export const campaignIdeas = [
   {
     eyebrow: 'PRODUCT STORY',
     title: '사용 장면으로 전하는 제품의 매력',
-    description:
-      '제품의 질감과 사용 맥락을 함께 보여줘 브랜드가 기억될 수 있는 장면을 설계합니다.',
+    description: '제품의 질감과 사용 맥락을 함께 보여줘 브랜드가 기억될 수 있는 장면을 설계합니다.',
     image: '/assets/campaign-product.svg',
     alt: '제품 사용 장면을 표현한 캠페인 그래픽',
   },
   {
     eyebrow: 'SHORT-FORM',
     title: '짧은 시간 안에 남는 브랜드 인상',
-    description:
-      '도입, 전환, 마무리 메시지를 압축해 릴스와 숏폼에 맞는 흐름으로 정리합니다.',
+    description: '도입, 전환, 마무리 메시지를 압축해 릴스와 숏폼에 맞는 흐름으로 정리합니다.',
     image: '/assets/campaign-shortform.svg',
     alt: '짧은 영상 편집 장면을 표현한 캠페인 그래픽',
   },

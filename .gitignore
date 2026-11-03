@@ -3,3 +3,9 @@ dist
 .npm-cache
 .vite
 *.local
+.env
+.env.*
+!.env.example
+.netlify
+artifacts
+*.log

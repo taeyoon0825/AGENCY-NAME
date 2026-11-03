@@ -1,3 +1,4 @@
+/* 디자인 토큰과 공통 요소 */
 :root {
   color-scheme: dark;
   --dark-bg: #111111;
@@ -17,9 +18,9 @@
     Pretendard,
     -apple-system,
     BlinkMacSystemFont,
-    "Segoe UI",
-    "Noto Sans KR",
-    "Apple SD Gothic Neo",
+    'Segoe UI',
+    'Noto Sans KR',
+    'Apple SD Gothic Neo',
     Arial,
     sans-serif;
   background: var(--dark-bg);
@@ -58,6 +59,21 @@ button {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
+}
+
+.review-notice {
+  margin-top: var(--header-height);
+  padding: 10px 20px;
+  background: var(--accent);
+  color: var(--dark-text);
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.review-notice + .hero .hero__inner {
+  padding-top: clamp(32px, 5vw, 56px);
 }
 
 a,
@@ -141,6 +157,7 @@ section {
   transform: translateY(0);
 }
 
+/* 고정 헤더와 모바일 메뉴 */
 .site-header {
   position: fixed;
   inset: 0 0 auto;
@@ -152,8 +169,7 @@ section {
     border-color 220ms ease;
 }
 
-.site-header.is-scrolled,
-.site-header.is-menu-open {
+.site-header.is-scrolled {
   border-bottom: 1px solid var(--line-dark);
   background: rgba(17, 17, 17, 0.86);
   backdrop-filter: blur(14px);
@@ -251,12 +267,12 @@ section {
   top: 28px;
 }
 
-.menu-toggle[aria-expanded="true"] span:first-child {
+.menu-toggle[aria-expanded='true'] span:first-child {
   top: 23px;
   transform: rotate(45deg);
 }
 
-.menu-toggle[aria-expanded="true"] span:last-child {
+.menu-toggle[aria-expanded='true'] span:last-child {
   top: 23px;
   transform: rotate(-45deg);
 }
@@ -264,26 +280,44 @@ section {
 .mobile-menu {
   position: fixed;
   inset: 0;
-  z-index: -1;
-  min-height: 100svh;
+  width: 100%;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
   background: #111;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 220ms ease;
+  color: var(--light-text);
+  overflow-y: auto;
 }
 
-.mobile-menu.is-open {
-  z-index: 49;
-  opacity: 1;
-  pointer-events: auto;
+.mobile-menu::backdrop {
+  background: #111;
 }
 
 .mobile-menu__panel {
   display: flex;
-  min-height: 100svh;
+  min-height: 100%;
   flex-direction: column;
   justify-content: space-between;
-  padding: calc(96px + env(safe-area-inset-top)) 20px calc(28px + env(safe-area-inset-bottom));
+  gap: 32px;
+  padding: max(12px, env(safe-area-inset-top)) 20px max(28px, env(safe-area-inset-bottom));
+}
+
+.mobile-menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-menu__close {
+  min-height: 44px;
+  min-width: 64px;
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius);
+  background: transparent;
+  color: inherit;
 }
 
 .mobile-menu nav {
@@ -350,7 +384,9 @@ section {
   color: var(--light-text);
 }
 
+/* 첫 화면과 콘텐츠 프레임 */
 .hero {
+  --parallax-scale: 1;
   position: relative;
   min-height: 100svh;
   overflow: clip;
@@ -358,7 +394,7 @@ section {
 
 .hero__inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
   align-items: center;
   gap: clamp(32px, 5vw, 80px);
   width: min(100%, var(--max-width));
@@ -386,8 +422,16 @@ section {
 }
 
 .hero__eyebrow {
-  opacity: 0;
   animation: rise-in 520ms ease forwards;
+}
+
+.hero__audience {
+  display: block;
+  margin-top: 12px;
+  color: var(--muted-light);
+  font-size: 14px;
+  line-height: 1.6;
+  text-transform: none;
 }
 
 .hero__title,
@@ -395,7 +439,7 @@ section {
   margin: 0;
   font-weight: 850;
   line-height: 1.1;
-  letter-spacing: 0;
+  letter-spacing: -0.04em;
 }
 
 .hero__title {
@@ -409,8 +453,6 @@ section {
 }
 
 .hero__title span {
-  opacity: 0;
-  transform: translateY(28px);
   animation: rise-in 640ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
   animation-delay: var(--delay);
 }
@@ -420,6 +462,7 @@ section {
   margin: 26px 0 0;
   color: var(--muted-light);
   font-size: clamp(17px, 1.5vw, 21px);
+  animation: rise-in 620ms ease both 260ms;
 }
 
 .hero__actions {
@@ -427,8 +470,6 @@ section {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 34px;
-  opacity: 0;
-  transform: translateY(22px);
   animation: rise-in 620ms ease forwards 360ms;
 }
 
@@ -445,7 +486,6 @@ section {
   border-radius: var(--radius);
   background: #1b1b1b;
   box-shadow: 0 22px 80px rgba(0, 0, 0, 0.28);
-  opacity: 0;
   transform: translate3d(0, 34px, 0) rotate(var(--rotate, 0deg));
   animation: frame-in 680ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
   animation-delay: calc(420ms + var(--frame-index) * 110ms);
@@ -478,7 +518,8 @@ section {
   top: 8%;
   width: min(62%, 380px);
   --rotate: 1.5deg;
-  transform: translate3d(-50%, calc(34px + var(--hero-progress, 0) * -96px), 0) rotate(var(--rotate));
+  transform: translate3d(-50%, calc(var(--hero-progress, 0) * -96px * var(--parallax-scale)), 0)
+    rotate(var(--rotate));
 }
 
 .frame--left {
@@ -486,7 +527,8 @@ section {
   left: 0;
   top: 24%;
   --rotate: -3deg;
-  transform: translate3d(0, calc(34px + var(--hero-progress, 0) * -62px), 0) rotate(var(--rotate));
+  transform: translate3d(0, calc(var(--hero-progress, 0) * -62px * var(--parallax-scale)), 0)
+    rotate(var(--rotate));
 }
 
 .frame--right {
@@ -494,7 +536,8 @@ section {
   right: 0;
   top: 31%;
   --rotate: 3deg;
-  transform: translate3d(0, calc(34px + var(--hero-progress, 0) * -78px), 0) rotate(var(--rotate));
+  transform: translate3d(0, calc(var(--hero-progress, 0) * -78px * var(--parallax-scale)), 0)
+    rotate(var(--rotate));
 }
 
 .scroll-cue {
@@ -536,6 +579,7 @@ section {
   font-size: clamp(44px, 4.5vw, 72px);
 }
 
+/* 에이전시 소개 */
 .about__body {
   max-width: 780px;
   margin-top: 30px;
@@ -588,6 +632,7 @@ section {
   font-size: 16px;
 }
 
+/* 서비스: 고정 설명과 세로 콘텐츠 */
 .services__grid {
   display: grid;
   grid-template-columns: minmax(280px, 0.42fr) minmax(0, 0.58fr);
@@ -598,6 +643,13 @@ section {
   position: sticky;
   top: calc(var(--header-height) + 48px);
   align-self: start;
+}
+
+.services__scope {
+  max-width: 420px;
+  margin: 24px 0 0;
+  color: var(--muted-dark);
+  font-size: 16px;
 }
 
 .service-progress {
@@ -686,18 +738,15 @@ section {
   font-weight: 750;
 }
 
+/* 캠페인: 기본 세로 목록, 넓고 높은 화면에서만 가로 장면 전환 */
 .campaign {
-  min-height: var(--gallery-height, auto);
-  overflow: clip;
+  padding: 104px 0;
 }
 
 .campaign__sticky {
-  position: sticky;
-  top: 0;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   align-content: center;
-  min-height: 100svh;
-  padding: calc(var(--header-height) + 52px) 0 72px;
 }
 
 .campaign__intro {
@@ -713,13 +762,12 @@ section {
 }
 
 .campaign__track {
-  display: flex;
+  display: grid;
   gap: clamp(32px, 4vw, 48px);
-  width: max-content;
-  margin-top: 56px;
+  width: min(100%, var(--max-width));
+  margin: 42px auto 0;
   padding-left: var(--page-x);
   padding-right: var(--page-x);
-  will-change: transform;
 }
 
 .campaign-panel {
@@ -727,8 +775,8 @@ section {
   grid-template-columns: minmax(280px, 0.58fr) minmax(240px, 0.42fr);
   align-items: end;
   gap: clamp(24px, 3vw, 42px);
-  width: min(70vw, 1000px);
-  min-height: 480px;
+  width: 100%;
+  min-width: 0;
   border: 1px solid var(--line-dark);
   border-radius: var(--radius);
   padding: clamp(18px, 2.4vw, 30px);
@@ -753,6 +801,37 @@ section {
   color: var(--muted-light);
 }
 
+/* Horizontal scenes are an enhancement; static/reduced-motion content stays vertical. */
+.campaign.is-horizontal {
+  min-height: var(--gallery-height);
+  padding: 0;
+  overflow: clip;
+}
+
+.campaign.is-horizontal .campaign__sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  padding: calc(var(--header-height) + 28px) 0 36px;
+}
+
+.campaign.is-horizontal .campaign__track {
+  display: flex;
+  width: max-content;
+  margin: 32px 0 0;
+  will-change: transform;
+}
+
+.campaign.is-horizontal .campaign-panel {
+  flex: 0 0 min(70vw, 1000px);
+  width: min(70vw, 1000px);
+}
+
+.campaign.is-horizontal .campaign-panel img {
+  height: min(34svh, 340px);
+}
+
+/* 진행 절차 */
 .process__grid {
   display: grid;
   grid-template-columns: minmax(260px, 0.38fr) minmax(0, 0.62fr);
@@ -789,6 +868,10 @@ section {
   color: #6c821d;
 }
 
+.process-step.is-active {
+  border-top-color: #6c821d;
+}
+
 .process-step h3 {
   margin: 0;
   font-size: clamp(24px, 2.3vw, 34px);
@@ -800,6 +883,7 @@ section {
   color: var(--muted-dark);
 }
 
+/* 크리에이터 협업 안내 */
 .creator-band {
   background: var(--accent);
   color: var(--dark-text);
@@ -837,8 +921,7 @@ section {
   border-radius: var(--radius);
   background:
     linear-gradient(90deg, rgba(24, 24, 24, 0.16) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(24, 24, 24, 0.16) 1px, transparent 1px),
-    #d7ff3f;
+    linear-gradient(0deg, rgba(24, 24, 24, 0.16) 1px, transparent 1px), #d7ff3f;
   background-size: 34px 34px;
   padding: 22px;
 }
@@ -873,6 +956,7 @@ section {
   font-weight: 700;
 }
 
+/* 문의 폼과 입력 상태 */
 .contact__grid {
   display: grid;
   grid-template-columns: minmax(260px, 0.4fr) minmax(0, 0.6fr);
@@ -956,6 +1040,13 @@ section {
   font-weight: 800;
 }
 
+/* 일반 필드 라벨의 block 스타일이 선택 버튼 정렬을 덮어쓰지 않게 합니다. */
+.form-panel .segmented label > span,
+.form-panel .choice > span {
+  display: flex;
+  margin-bottom: 0;
+}
+
 .form-panel b,
 .privacy-check b {
   color: var(--accent);
@@ -991,8 +1082,21 @@ section {
 .segmented input,
 .choice input {
   position: absolute;
+  width: 1px;
+  min-width: 0;
+  height: 1px;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  clip-path: inset(50%);
   opacity: 0;
   pointer-events: none;
+}
+
+.segmented input:focus-visible + span,
+.choice input:focus-visible + span {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .choice-grid {
@@ -1019,6 +1123,7 @@ section {
 
 .privacy-check label {
   display: flex;
+  min-height: 44px;
   gap: 10px;
   align-items: flex-start;
 }
@@ -1045,7 +1150,7 @@ section {
   line-height: 1.45;
 }
 
-[aria-invalid="true"] {
+[aria-invalid='true'] {
   border-color: #ffb7a9;
 }
 
@@ -1060,6 +1165,7 @@ section {
   font-size: 13px;
 }
 
+/* 푸터와 맨 위로 이동 */
 .site-footer {
   border-top: 1px solid var(--line-dark);
   padding: 48px var(--page-x) calc(48px + env(safe-area-inset-bottom));
@@ -1089,6 +1195,10 @@ section {
   justify-items: end;
   gap: 10px;
   color: var(--muted-light);
+}
+
+.footer-actions button {
+  min-height: 44px;
 }
 
 .privacy-note {
@@ -1121,6 +1231,8 @@ section {
 
 .footer-contact dd {
   margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .back-to-top {
@@ -1148,6 +1260,7 @@ section {
   transform: translateY(0);
 }
 
+/* 모션은 콘텐츠를 읽을 수 있는 기본 상태 위에 추가 */
 .motion-ready [data-reveal] {
   opacity: 0;
   transform: translateY(26px);
@@ -1161,7 +1274,37 @@ section {
   transform: translateY(0);
 }
 
+.motion-ready .stagger-title {
+  opacity: 1;
+  transform: none;
+}
+
+.motion-ready .stagger-title span {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 600ms ease,
+    transform 600ms ease;
+}
+
+.motion-ready .stagger-title.is-visible span {
+  opacity: 1;
+  transform: none;
+}
+
+.stagger-title span:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+.motion-ready .about__body:not(.is-visible) {
+  transform: translateY(12px);
+}
+
 @keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1169,11 +1312,17 @@ section {
 }
 
 @keyframes frame-in {
+  from {
+    opacity: 0;
+    translate: 0 24px;
+  }
   to {
     opacity: 1;
+    translate: 0 0;
   }
 }
 
+/* 태블릿 */
 @media (max-width: 1199px) {
   :root {
     --page-x: 32px;
@@ -1182,6 +1331,10 @@ section {
   .hero__inner {
     grid-template-columns: 1fr;
     padding-top: calc(var(--header-height) + 64px);
+  }
+
+  .hero {
+    --parallax-scale: 0.3;
   }
 
   .hero__copy {
@@ -1205,7 +1358,6 @@ section {
 
   .campaign__sticky {
     min-height: auto;
-    padding: 104px 0;
   }
 
   .campaign__track {
@@ -1232,6 +1384,7 @@ section {
   }
 }
 
+/* 모바일 */
 @media (max-width: 767px) {
   :root {
     --page-x: 20px;
@@ -1371,6 +1524,10 @@ section {
   }
 
   .campaign__sticky {
+    padding: 0;
+  }
+
+  .campaign {
     padding: 82px 0;
   }
 
@@ -1441,21 +1598,30 @@ section {
   }
 }
 
+/* 모션 감소: 모든 내용에 일반 스크롤로 접근 */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     scroll-behavior: auto !important;
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
+    animation: none !important;
+    transition: none !important;
   }
 
   .hero__copy,
-  .frame--main,
   .frame--left,
   .frame--right,
   .campaign__track {
+    transform: none !important;
+  }
+
+  .frame--main {
+    transform: translateX(-50%) !important;
+  }
+
+  .motion-ready [data-reveal],
+  .motion-ready .stagger-title span {
+    opacity: 1 !important;
     transform: none !important;
   }
 
@@ -1463,7 +1629,10 @@ section {
     min-height: auto !important;
   }
 
-  .campaign__sticky {
+  .campaign__sticky,
+  .services__sticky,
+  .process__heading,
+  .contact__heading {
     position: static;
     min-height: auto;
   }
