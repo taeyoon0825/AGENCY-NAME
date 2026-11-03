@@ -25,13 +25,17 @@ export function useReveal(reducedMotion) {
         (entries) => {
           for (const entry of entries) {
             if (!entry.isIntersecting) continue;
-            entry.target.classList.add('is-visible');
+            // Keep reveal state separate from className, which React updates
+            // when a process step becomes active or inactive.
+            entry.target.dataset.revealed = 'true';
             observer.unobserve(entry.target);
           }
         },
         { threshold: 0, rootMargin: '0px 0px -32px 0px' },
       );
-      document.querySelectorAll('[data-reveal]').forEach((element) => observer.observe(element));
+      document
+        .querySelectorAll('[data-reveal]:not([data-revealed="true"])')
+        .forEach((element) => observer.observe(element));
       // Enable hidden entry states only after observation succeeds.
       document.documentElement.classList.add('motion-ready');
     } catch {
